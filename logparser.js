@@ -11,18 +11,20 @@ class LogParser {
     this.listUniqueDates = []
     this.countMsgPerDate = {}
     this.countlogLevelPerDate = {}
+    this.inputFile = './data/production.log'
 
   }
 
   readLogFile(callback)
   {
-    let that = this
-    fs.readFile('./data/production.log', function (err, data) {
+    //let that = this
+    fs.readFile(this.inputFile, function (err, data) {
       if (err)
       return err
       if (callback) {
         callback(null, data.toString())
       }
+      ///that....
     })
   }
 

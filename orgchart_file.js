@@ -1,8 +1,9 @@
 'use strict'
 
-class OrgChart {
+const LogParser = require('./logparser')
+class OrgChart extends LogParser {
   constructor(){
-    this.fileContents = ''
+    super()
     this.parsedFile = []
     this.parsedObject = {}
   }
@@ -10,7 +11,7 @@ class OrgChart {
   // readFileContents () {}
 
   parseFile(){
-    this.parsedFile = this.fileContents.trim().split('\n')
+    this.parsedFile = this.logData.trim().split('\n')
   }
 
   convertToObjects (){

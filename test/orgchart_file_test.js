@@ -7,7 +7,7 @@ describe('Given an orgchart file', ()=> {
   describe('When the parse file method is invoked', ()=> {
     it('should return a list of names', ()=> {
       let orgChart = new OrgChart()
-      orgChart.fileContents = mockFile
+      orgChart.logData = mockFile
       orgChart.parseFile()
       expect(orgChart.parsedFile).to.eql(['Trina',' Anthony', ' Gabe', ' Sophia', 'Leles', ' Dodie'])
     })
@@ -16,7 +16,7 @@ describe('Given an orgchart file', ()=> {
   describe('When the parse file method is invoked', ()=> {
     it('should return an object of names', ()=> {
       let orgChart = new OrgChart()
-      orgChart.fileContents = mockFile
+      orgChart.logData = mockFile
       orgChart.parseFile()
       orgChart.convertToObjects()
       expect(orgChart.parsedObject).to.eql({'Trina': ['Anthony', 'Gabe', 'Sophia'], 'Leles': ['Dodie']})
