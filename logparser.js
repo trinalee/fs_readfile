@@ -14,17 +14,15 @@ class LogParser {
 
   }
 
-  readLogFile()
+  readLogFile(callback)
   {
     let that = this
     fs.readFile('./data/production.log', function (err, data) {
       if (err)
       return err
-      that.logData = data.toString()
-      that.parseLog()
-      that.listDates()
-      that.msgPerDate()
-      that.logLevelPerDate()
+      if (callback) {
+        callback(null, data.toString())
+      }
     })
   }
 
