@@ -1,0 +1,26 @@
+{
+  "name": "fs_readfile",
+  "version": "1.0.0",
+  "description": "",
+  "main": "logparser.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/trinalee/fs_readfile.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/trinalee/fs_readfile/issues"
+  },
+  "homepage": "https://github.com/trinalee/fs_readfile#readme",
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^3.2.0"
+  }
+}
